@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Card Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="writeRecipeToFile.js" defer></script>
+    <script src="recipe.js" defer></script>
+</head>
+<body>
+    <div class="container"> 
+        <h1 tabindex="0" aria-label="Recipe Builder">Recipe Builder</h1>
+        <div class="title">
+            <input id="recipe-name" aria-label="Recipe Name" aria-description="Input the name of your recipe." type="text" placeholder="Recipe Title" aria-label="Recipe Title" class="title-input">
+        </div>
+        <div class="ingredient">
+            <input id="ingredient-input" aria-label="Ingredient" aria-description="Press enter to submit your ingredient." type="text" placeholder="Ingredient Name" aria-label="Ingredient Name" class="ingredient-input"> <button id="ingredient-button" class="ingredient-button">Add</button>
+        </div>
+        <div class="ingredient">
+            <div id="ingredients-container" class="ingredients-container" aria-live="polite">
+                <!--<div class="center">Your ingredients will appear here</div>-->
+            </div>
+        </div>
+        <div class="instruction">
+            <input id="instruction-input" aria-label="Instruction" aria-description="Press enter to submit your instruction." type="text" placeholder="Instruction" aria-label="Instruction" class="instruction-input"> <button id="instruction-button" class="instruction-button">Add</button>
+        </div>
+        <div class="instruction">
+            <div class="instructions-container" id="instructions-container" aria-live="polite">
+                <!--<div class="center">Your instructions will appear here</div>-->
+            </div>
+        </div>
+        <div class="submission">
+            <div class="submission-container">
+                <button aria-label="Reset" aria-description="Press enter or space to reset your recipe" id="reset-button" class="reset-button">Reset</button>
+                <button aria-label="Save" aria-description="Press enter or space to save your recipe" id="save-button" class="save-button">Save</button>
+            </div>
+        </div>
+
+        <div id="error-message" aria-live="assertive">
+            
+        </div>
+        
+    </div>
+    
+</body>
+</html>
